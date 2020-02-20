@@ -1,10 +1,9 @@
 
 
 .card-index {
-    width: 350px;
-    height: 400px;
-    flex: 1;
-    margin: 20px 10px;
+    width: 10%;
+    height: 95%;
+    margin: 20px 5px;
     box-shadow: 2px 4px 4px #00000033;
     transition: ease 0.5s;
     overflow: hidden;
@@ -12,6 +11,21 @@
     &:hover {
       box-shadow: 1px 1px 12px #00000077;
       border: 1px solid white;
+    }
+
+    .card-img {
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+    .card-body {
+      display: none;
+    }
+
+    .card-btn {
+      display: none;
     }
   }
 
