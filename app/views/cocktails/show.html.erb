@@ -1,2 +1,34 @@
-<h1>Cocktails#show</h1>
-<p>Find me in app/views/cocktails/show.html.erb</p>
+<h1 class="show-title"><%= @cocktail.name %></h1>
+
+<br><br>
+
+<div class="cocktail-container show-page">
+
+    <div class="card-show">
+      <img class="card-img-top" src="<%= @cocktail.picture_url %>" alt="Card image cap">
+      <div class="card-body">
+        <h3 class="card-title"><%= @cocktail.name.capitalize %></h3>
+        <h5 class="card-text"><%= @cocktail.description %></h5>
+
+        <% @doses.each do |dose| %>
+          <p class="card-text dose">
+            <%= link_to 'X', dose_path(dose.id), method: :delete, data: {confirm: 'Are you sure deleting this dose?'} %>
+            <span><%= dose.ingredient.name %> -</span><span>- <%= dose.description %></span>
+          </p>
+        <% end %>
+
+      </div>
+
+      <%= link_to 'Home', cocktails_path, class: 'btn btn-dark' %>
+      <%= link_to 'Edit this cocktail', edit_cocktail_path(@cocktail),
+          method: :get,
+          class: 'btn btn-light'  %>
+      <%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail),
+          method: :get,
+          class: 'btn btn-light'  %>
+      <%= link_to 'Delete', cocktail_path(@cocktail),
+          method: :delete,
+          data: {confirm: 'Are you sure deleting this cocktail?'}, class: 'btn btn-danger'  %>
+    </div>
+
+</div>

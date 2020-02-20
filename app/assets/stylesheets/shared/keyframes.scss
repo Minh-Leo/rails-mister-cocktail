@@ -1,0 +1,36 @@
+
+@keyframes wobble {
+  0%,
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+  }
+  15% {
+    -webkit-transform: translateX(-1px);
+            transform: translateX(-1px);
+  }
+
+  45% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+
+  75% {
+    -webkit-transform: translateX(1px);
+            transform: translateX(1px);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.01);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

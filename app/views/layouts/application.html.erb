@@ -9,13 +9,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
   </head>
 
   <body>
 
-    <div class="container">
+    <header class="header">
+      <h1>The Bartender</h1>
+
+    </header>
+
+    <div class="page-container">
       <%= yield %>
     </div>
 

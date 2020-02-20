@@ -7,7 +7,9 @@ class CocktailsController < ApplicationController
     @cocktails = Cocktail.all
   end
 
-  def show; end
+  def show
+    @doses = @cocktail.doses
+  end
 
   def new
     @cocktail = Cocktail.new
@@ -25,7 +27,7 @@ class CocktailsController < ApplicationController
   def edit; end
 
   def update
-    @cocktail = @cocktail.update(cocktail_params)
+    @cocktail.update(cocktail_params)
     if @cocktail.save
       redirect_to cocktail_path(@cocktail)
     else
@@ -34,6 +36,7 @@ class CocktailsController < ApplicationController
   end
 
   def destroy
+    @cocktail.destroy
     redirect_to cocktails_path
   end
 
@@ -44,6 +47,6 @@ class CocktailsController < ApplicationController
   end
 
   def cocktail_params
-    params.require(:cocktail).permit(:name)
+    params.require(:cocktail).permit(:name, :picture_url, :description)
   end
 end

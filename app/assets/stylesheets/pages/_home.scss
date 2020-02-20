@@ -1,1 +1,57 @@
 // Specific CSS for your home-page
+
+
+.page-container {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.cocktail-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  height: 80vh;
+  // border: 1px dashed blue;
+
+  &.show-page {
+
+  }
+
+
+}
+
+.show-title {
+  background: #ffffffcc;
+  width: 100vw;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 4px 4px #00000033;
+  text-shadow: 2px 4px 4px #00000033;
+}
+
+form {
+  margin: 10px 30px;
+  padding: 10px;
+}
+
+.btn {
+  margin-top: 5px;
+}
+
+
+
+.scale {
+  &:hover {
+    animation: scale 1s infinite;
+  }
+}
+

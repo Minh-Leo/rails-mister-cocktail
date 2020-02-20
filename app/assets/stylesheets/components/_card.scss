@@ -1,0 +1,46 @@
+
+
+.card-index {
+    width: 350px;
+    height: 400px;
+    flex: 1;
+    margin: 20px 10px;
+    box-shadow: 2px 4px 4px #00000033;
+    transition: ease 0.5s;
+    overflow: hidden;
+
+    &:hover {
+      box-shadow: 1px 1px 12px #00000077;
+      border: 1px solid white;
+    }
+  }
+
+
+.card-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &.dose {
+    font-size: 14px;
+    font-weight: bold;
+    color: #d04e46;
+  }
+}
+
+
+.card-show {
+  width: 80%;
+  margin-top: 100px;
+  opacity: 0.9;
+  border-radius: 10px;
+  box-shadow: 2px 4px 4px #00000033;
+  transition: ease 0.5s;
+  overflow: hidden;
+
+  &:hover {
+    opacity: 1;
+    box-shadow: 1px 1px 12px #00000077;
+    border: 1px solid white;
+  }
+}

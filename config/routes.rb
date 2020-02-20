@@ -11,7 +11,12 @@ Rails.application.routes.draw do
     resources :doses, only: [:new, :create]
   end
 
-  resources :doses, only: [:destroy]
+  resources :doses, only: [:edit, :update, :destroy]
 
   resources :ingredients, only: [:index]
 end
+
+
+# cocktail_doses POST   /cocktails/:cocktail_id/doses(.:format)                                          doses#create
+
+# new_cocktail_dose GET    /cocktails/:cocktail_id/doses/new(.:format)                                              doses#new

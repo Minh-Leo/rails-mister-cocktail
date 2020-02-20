@@ -1,0 +1,16 @@
+
+.header {
+  background: $smoky-black;
+  color: $champagne-white;
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $headers-font;
+
+
+  h1 {
+  font-size: 24px;
+  }
+}
