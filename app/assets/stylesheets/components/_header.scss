@@ -1,6 +1,6 @@
 
 .header {
-  background: $smoky-black;
+  background: $raisin-black;
   color: $champagne-white;
   width: 100vw;
   height: 60px;
@@ -8,9 +8,13 @@
   justify-content: center;
   align-items: center;
   font-family: $headers-font;
-
+  margin-bottom: 20px;
 
   h1 {
-  font-size: 24px;
+    font-size: 24px;
+    margin-top: 8px;
+
+    a {
+    }
   }
 }

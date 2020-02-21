@@ -21,6 +21,7 @@
 
 a {
   text-decoration: none;
+  color: $white-2;
 }
 
 li {
@@ -29,4 +30,5 @@ li {
 
 body {
   background: $white-1;
+  font-family: $body-font;
 }

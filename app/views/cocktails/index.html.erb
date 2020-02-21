@@ -4,7 +4,7 @@
   <% @cocktails.each do |cocktail| %>
     <div class="card-index scale">
       <div class="card-img">
-        <img src="<%= cocktail.picture_url %>" alt="Card image cap">
+        <img src="<%= cl_image_path cocktail.photo.key %>" alt="Card image cap">
       </div>
       <div class="card-body">
         <h3 class="card-title"><%= link_to cocktail.name.capitalize, cocktail_path(cocktail) %></h3>
@@ -17,4 +17,5 @@
   <% end %>
 
 </div>
-<%= link_to '+ Add new Cocktail', new_cocktail_path, class: 'm-8' %>
+<%= link_to '+ Add new Cocktail', new_cocktail_path, class: 'btn-new' %>
+

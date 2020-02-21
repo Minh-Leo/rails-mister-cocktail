@@ -20,6 +20,7 @@
   align-items: center;
   width: 100%;
   height: 100%;
+  font-family: $body-font;
   // border: 1px dashed blue;
 
   &.show-page {
@@ -49,7 +50,11 @@ form {
   margin-top: 5px;
 }
 
+.btn-new {
+  margin: 8px;
+  color: $raisin-black;
 
+}
 
 .scale {
   &:hover {
