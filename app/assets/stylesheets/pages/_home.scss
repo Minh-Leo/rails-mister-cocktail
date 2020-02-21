@@ -56,9 +56,18 @@ form {
 
 }
 
+.btn-dark {
+  margin: 8px;
+  color: $raisin-black;
+
+}
+
 .scale {
   &:hover {
     animation: scale 1s infinite;
   }
 }
 
+.rotate {
+  transform: rotate(-90deg);
+}

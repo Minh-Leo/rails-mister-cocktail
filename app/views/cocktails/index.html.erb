@@ -2,18 +2,21 @@
 
 <div class="cocktail-container">
   <% @cocktails.each do |cocktail| %>
-    <div class="card-index scale">
-      <div class="card-img">
-        <img src="<%= cl_image_path cocktail.photo.key %>" alt="Card image cap">
+
+
+      <div class="card-index scale">
+        <div class="card-img">
+          <img src="<%= cl_image_path cocktail.photo.key %>" alt="Card image cap">
+        </div>
+        <div class="card-body rotate">
+          <h3 class="card-title "><%= link_to cocktail.name.capitalize, cocktail_path(cocktail) %></h3>
+          <!--<p class="card-text dose "><%= cocktail.ingredients.size %> ingredients</p>-->
+        </div>
+        <a href="/cocktails/<%= cocktail.id %>"><div class="card-overlay"></div>
+    </a>
+
       </div>
-      <div class="card-body">
-        <h3 class="card-title"><%= link_to cocktail.name.capitalize, cocktail_path(cocktail) %></h3>
-        <p class="card-text dose"><%= cocktail.ingredients.size %> ingredients</p>
-      </div>
-      <%= link_to 'Delete', cocktail_path(cocktail),
-          method: :delete,
-          data: {confirm: 'Are you sure deleting this cocktail?'}, class: 'card-btn'  %>
-    </div>
+
   <% end %>
 
 </div>

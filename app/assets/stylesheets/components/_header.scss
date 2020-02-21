@@ -1,6 +1,6 @@
 
 .header {
-  background: $raisin-black;
+  background: $pewter-blue;
   color: $champagne-white;
   width: 100vw;
   height: 60px;
@@ -9,12 +9,19 @@
   align-items: center;
   font-family: $headers-font;
   margin-bottom: 20px;
+  box-shadow: 2px 2px 4px #00000033;
+
 
   h1 {
     font-size: 24px;
     margin-top: 8px;
 
     a {
+
+      &:hover {
+        color: $raisin-black;
+
+      }
     }
   }
 }

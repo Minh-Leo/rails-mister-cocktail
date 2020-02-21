@@ -5,8 +5,10 @@
 <div class="cocktail-container show-page">
 
     <div class="card-show">
-      <img class="card-img-top" src="<%= @cocktail.picture_url %>" alt="Card image cap">
-      <div class="card-body">
+      <div class="card-img">
+        <img src="<%= cl_image_path @cocktail.photo.key %>" alt="Card image cap">
+      </div>
+      <div class="card-show-body">
         <h3 class="card-title"><%= @cocktail.name.capitalize %></h3>
         <h5 class="card-text"><%= @cocktail.description %></h5>
 
@@ -18,17 +20,18 @@
         <% end %>
 
       </div>
-
-      <%= link_to 'Home', cocktails_path, class: 'btn btn-dark' %>
-      <%= link_to 'Edit this cocktail', edit_cocktail_path(@cocktail),
-          method: :get,
-          class: 'btn btn-light'  %>
-      <%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail),
-          method: :get,
-          class: 'btn btn-light'  %>
-      <%= link_to 'Delete', cocktail_path(@cocktail),
-          method: :delete,
-          data: {confirm: 'Are you sure deleting this cocktail?'}, class: 'btn btn-danger'  %>
+      <div class="btn-container">
+        <%= link_to 'Home', cocktails_path, class: 'btn btn-dark' %>
+        <%= link_to 'Edit this cocktail', edit_cocktail_path(@cocktail),
+            method: :get,
+            class: 'btn btn-dark'  %>
+        <%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail),
+            method: :get,
+            class: 'btn btn-dark'  %>
+        <%= link_to 'Delete', cocktail_path(@cocktail),
+            method: :delete,
+            data: {confirm: 'Are you sure deleting this cocktail?'}, class: 'btn btn-dark'  %>
+        </div>
     </div>
 
 </div>
